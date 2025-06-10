@@ -110,11 +110,8 @@ train_pred  = (train_proba >= 0.5).astype(int)
 val_proba = model.predict(X_val).ravel()
 val_pred  = (val_proba >= 0.5).astype(int)
 
-# (you already have these for test)
-# y_proba, y_pred on your 2024 test set
-# y_true = df_test['Home_Win?'].astype(int)
 
-# 2) Compute error (mis-classification) rate = 1 − accuracy
+# Compute error (mis-classification) rate = 1 − accuracy
 train_error = 1 - accuracy_score(y_train, train_pred)
 val_error   = 1 - accuracy_score(y_val,   val_pred)
 test_error  = 1 - accuracy_score(y_true,  y_pred)
