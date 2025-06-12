@@ -24,6 +24,7 @@ base_feats = [
     'temp',            # temperature
     'wind'             # wind speed
 ]
+
 cat_feats = ['roof', 'surface']
 
 # --- 2) Finalize X and Y for validation ---
